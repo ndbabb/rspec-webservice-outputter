@@ -17,29 +17,28 @@ Juwelier::Tasks.new do |gem|
   gem.name = "rspec-webservice-outputter"
   gem.homepage = "http://github.com/ndbabb/rspec-webservice-outputter"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "nbabb@ideally.com"
+  gem.summary = "Outputs webservice request/response JSON data for rails rspec request specs"
+  #gem.description = "Outputs the webservice request/response JSON data of rspec functional specs"
+  gem.email = "ndbabb@gmail.com"
   gem.authors = ["Nicholas Babb"]
 
   # dependencies defined in Gemfile
 end
 Juwelier::RubygemsDotOrgTasks.new
 
-require 'rake/testtask'
-Rake::TestTask.new(:test) do |test|
-  test.libs << 'lib' << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
+require 'rspec/core'
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new(:spec) do |spec|
+  spec.pattern = FileList['spec/**/*_spec.rb']
 end
 
 desc "Code coverage detail"
 task :simplecov do
   ENV['COVERAGE'] = "true"
-  Rake::Task['test'].execute
+  Rake::Task['spec'].execute
 end
 
-task :default => :test
+task :default => :spec
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
