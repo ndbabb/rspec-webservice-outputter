@@ -1,4 +1,4 @@
-require 'rspec_webservice_outputter'
+require 'rspec-webservice-outputter/base'
 
 RSpec.configure do |config|
   config.after(:each) do
