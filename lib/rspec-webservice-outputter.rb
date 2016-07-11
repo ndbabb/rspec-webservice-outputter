@@ -1,3 +1,4 @@
+require 'rspec/core'
 require 'rspec-webservice-outputter/base'
 
 RSpec.configure do |config|
