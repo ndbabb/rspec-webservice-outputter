@@ -1,7 +1,6 @@
 source "https://rubygems.org"
 
 gem "rspec", ">= 2.0"
-gem "activesupport", ">= 3.0"
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.

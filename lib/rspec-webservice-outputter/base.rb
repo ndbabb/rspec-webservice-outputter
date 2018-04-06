@@ -1,4 +1,3 @@
-require 'active_support/core_ext/object/blank'
 require 'json'
 
 module RspecWebServiceOutputter
@@ -40,11 +39,11 @@ module RspecWebServiceOutputter
     private
 
     def query_string
-      "?#{@request.query_string}" if @request.query_string.present?
+      "?#{@request.query_string}" if @request.query_string
     end
 
     def request_body
-      if @request.body.read.present?
+      if @request.body.read
         begin
           JSON.pretty_generate(JSON.parse(@request.body.read))
         rescue
@@ -66,7 +65,7 @@ module RspecWebServiceOutputter
     private
 
     def response_body
-      if @response.body.present?
+      if @response.body
         begin
           JSON.pretty_generate(JSON.parse(@response.body))
         rescue

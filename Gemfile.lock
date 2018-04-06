@@ -1,12 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (4.2.6)
-      i18n (~> 0.7)
-      json (~> 1.7, >= 1.7.7)
-      minitest (~> 5.1)
-      thread_safe (~> 0.3, >= 0.3.4)
-      tzinfo (~> 1.1)
     addressable (2.4.0)
     ast (2.3.0)
     builder (3.2.2)
@@ -25,7 +19,6 @@ GEM
       oauth2
     hashie (3.4.4)
     highline (1.7.8)
-    i18n (0.7.0)
     json (1.8.3)
     juwelier (2.1.2)
       builder
@@ -39,7 +32,6 @@ GEM
       semver
     jwt (1.5.1)
     mini_portile2 (2.1.0)
-    minitest (5.9.0)
     multi_json (1.12.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
@@ -88,15 +80,12 @@ GEM
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.0)
     thread_safe (0.3.5)
-    tzinfo (1.2.2)
-      thread_safe (~> 0.1)
     unicode-display_width (1.0.5)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  activesupport (>= 3.0)
   bundler (~> 1.0)
   juwelier (~> 2.1.0)
   rdoc (~> 3.12)
@@ -105,4 +94,4 @@ DEPENDENCIES
   simplecov (>= 0.11)
 
 BUNDLED WITH
-   1.10.3
+   1.16.1
