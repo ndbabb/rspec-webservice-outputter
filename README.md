@@ -1,5 +1,7 @@
 # rspec-webservice-outputter
 
+[![Build Status](https://travis-ci.org/ndbabb/rspec-webservice-outputter.svg?branch=master)](https://travis-ci.org/ndbabb/rspec-webservice-outputter)
+
 Developing a JSON API in Rails? The rspec-webservice-outputter gem will print the JSON request/response data when running your rspec request specs. 
 
 There are some other tools for inspecting HTTP request/response data such as the Chrome DevTools or the Postman Chrome extension. This gem takes a different approach by providing a method to inspect the HTTP request/response from the command-line when running/debugging tests. 
