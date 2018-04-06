@@ -7,7 +7,7 @@ gem "rspec", ">= 2.0"
 group :development do
   gem "rdoc", "~> 3.12"
   gem "bundler", "~> 1.0"
-  gem "juwelier", "~> 2.1.0"
+  gem "juwelier", "~> 2.4"
   gem "simplecov", ">= 0.11"
   gem "rubocop"
 end
