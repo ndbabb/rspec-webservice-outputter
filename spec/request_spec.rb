@@ -13,7 +13,7 @@ describe RspecWebServiceOutputter::Request do
   end
   let(:request_empty_body) do
     body = double("body")
-    allow(body).to receive(:read).and_return(nil)
+    allow(body).to receive(:read).and_return('')
     request = double("request")
     allow(request).to receive(:method).and_return("POST")
     allow(request).to receive(:path).and_return("/here-is-a-path")

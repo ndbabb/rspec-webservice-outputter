@@ -32,23 +32,23 @@ module RspecWebServiceOutputter
     end
 
     def to_s
-      "REQUEST:\n" +
+      "REQUEST:\n" \
       "#{@request.method} #{@request.path}#{query_string}\n#{request_body}"
     end
 
     private
 
     def query_string
-      "?#{@request.query_string}" if @request.query_string
+      "?#{@request.query_string}" if @request.query_string && !@request.query_string.empty?
     end
 
     def request_body
-      if @request.body.read
-        begin
-          JSON.pretty_generate(JSON.parse(@request.body.read))
-        rescue
-          "[Non-JSON request body]"
-        end
+      request_body = @request.body.read
+      return unless request_body && !request_body.empty?
+      begin
+        JSON.pretty_generate(JSON.parse(@request.body.read))
+      rescue
+        "[Non-JSON request body]"
       end
     end
   end
